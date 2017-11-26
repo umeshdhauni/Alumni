@@ -1,0 +1,20 @@
+page-login {
+
+}
+.login-main{
+    margin-top:50%;
+}
+.login{
+    background-image:url("../assets/imgs/login-back1.png");
+    background-size: 100% 100%;
+}
+.login ion-item.item.item-block.item-md.item-input.item-label-floating{
+    background-color: transparent;
+    padding: 0px 25px 0px 25px;
+}
+.hidden-item{
+    display: none;
+}
+.login .button-round-md{
+    width: 55%;
+}   

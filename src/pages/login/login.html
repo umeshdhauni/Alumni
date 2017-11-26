@@ -1,0 +1,26 @@
+<ion-content padding text-center class="login">
+  <h2 style="color:white;">Alumni Network</h2>
+  <div class="login-main"> 
+  <form (ngSubmit)="showlogin()"> 
+  <ion-list>
+
+      <ion-item class="login-username">
+        <ion-label floating style="color:#ffffff">Username</ion-label>
+        <ion-input type="text"></ion-input>
+      </ion-item>
+
+      <ion-item  class="login-password">
+        <ion-label floating style="color:#ffffff">Password</ion-label>
+        <ion-input type="password"></ion-input>
+      </ion-item>
+      <ion-item class="hidden-item">
+      </ion-item>
+    </ion-list>
+    <br>
+    <button ion-button color="secondary" round  class="submit-btn">Login</button>
+  </form>
+    <br>
+    <button ion-button color="danger" round (click)="showSignupPage()">SignUp</button>
+  
+  </div>
+</ion-content>
