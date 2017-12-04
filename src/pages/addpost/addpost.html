@@ -20,5 +20,26 @@
 
 
 <ion-content padding>
-
+  <div class="add-post">
+    <ion-textarea name="postData" placeholder="Start Typing..." [(ngModel)]="postContent" name="postContent"></ion-textarea>
+  </div>
+  <div class="add-post-image" padding>
+    <img [src]="_DomSanitizer.bypassSecurityTrustUrl(base64Image)" *ngIf="base64Image" />
+  </div>
+  <hr>
+    <div class="add-post-file">
+      <ion-row>
+      <ion-col width-15>
+          <ion-icon name="camera" (click)="accessCamera()"></ion-icon>
+      </ion-col>
+      <ion-col width-15>
+          <ion-icon name="images" (click)="accessGallery()"></ion-icon>
+      </ion-col>
+      
+      <ion-col width-25 class="add-post-btn">
+          <button ion-button color="secondary" type="submit" round class="submit-btn" (click)="postData()">Post</button>
+      </ion-col>
+    </ion-row>
+    </div>
+  <hr>
 </ion-content>

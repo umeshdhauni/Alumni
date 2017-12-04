@@ -1,0 +1,53 @@
+var headers = new Headers();
+    headers.append('content-type', 'application/json;charset=UTF-8');
+    let options= new RequestOptions({headers: headers});
+    var url = 'http://192.168.43.118:8080/register';
+    let data = this.signupDetails;    
+    this.http.post(url, data , options)
+        .map(res=>res.json())
+        .subscribe(
+            res => {
+              if(res.status=="registered"){
+                  this.navCtrl.setRoot(LoginPage);
+              }
+              else{
+                
+              }
+            },
+            err => {
+              console.log("ERROR!: ", err);
+            }
+        );
+
+
+
+
+
+
+
+
+        var headers = new Headers();
+    headers.append('content-type', 'application/json;charset=UTF-8');
+    let options= new RequestOptions({headers: headers});
+    var url = 'http://192.168.43.118:8080/login';
+    let data={
+      email:this.email,
+      password:this.password,
+    }    
+    this.http.post(url, data , options)
+        .map(res=>res.json())
+        .subscribe(
+            res => {
+              if(res.status=="loggedin"){
+                this.name=res.name;
+                this.type=res.type;
+                this.navCtrl.setRoot(TabsPage);  
+              }
+              else{
+                
+              }
+            },
+            err => {
+              console.log("ERROR!: ", err);
+            }
+        );

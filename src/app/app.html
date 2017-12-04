@@ -5,11 +5,12 @@
     
       <div class="menu-profile">
           <div class="menu-profile-image">
-            <img src="../assets/imgs/profile-picture.png">
+            <img src="assets/imgs/profile-picture.png">
           </div>
-          <div class="menu-profile-details" >
-            <h3>Umesh Dhauni</h3>
-            <p>Student</p>
+          <div class="menu-profile-details">
+            <h3>{{user.name}}</h3>
+            <p *ngIf="user.type">Alumni</p>
+            <p *ngIf="!user.type">Student</p>            
           </div>
       </div>
       <div class="menu-profile-status" text-center>

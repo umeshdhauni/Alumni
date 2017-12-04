@@ -1,3 +1,33 @@
 page-addpost {
 
 }
+.add-post-file ion-icon{
+    font-size: 25px;
+}
+ion-col {
+&[width-15] {
+flex: 0 0 15%;
+max-width: 15%;
+}
+
+&[width-25] {
+flex: 0 0 25%;
+max-width: 25%;
+}
+}
+.add-post-image img{
+    width: 110px;
+    height: 115px;
+}
+.add-post-btn{
+    margin-left: 68%;
+    margin-top: -46px;
+}
+.add-post-file{
+    padding-top: 10px;
+}
+.add-post textarea {
+max-width: 100%;
+width: 100%;
+height: 10vh;
+}

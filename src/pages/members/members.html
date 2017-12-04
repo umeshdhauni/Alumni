@@ -18,7 +18,11 @@
 </ion-toolbar>
 </ion-header>
 <ion-content padding>
-    <div padding>
+      <ion-searchbar
+      [(ngModel)]="searchName"
+      (ionInput)="setFilteredItems()"
+      ></ion-searchbar>
+    <div>
       <ion-segment [(ngModel)]="members">
         <ion-segment-button value="alumni">
           Alumni
@@ -28,23 +32,25 @@
         </ion-segment-button>
       </ion-segment>
     </div>
+    <br>
     <div [ngSwitch]="members">
   <ion-list *ngSwitchCase="'alumni'">
     <ion-item>
       <ion-thumbnail item-start>
-        <img src="../../assets/imgs/profile-picture.png">
+        <img src="assets/imgs/profile-picture.png" class="members-image">
       </ion-thumbnail>
-      <h2>Ruby</h2>
+      <h2>Ramesh Joshi</h2>
+      <p>Software Developer,TCS</p>
     </ion-item>
   </ion-list>
   <ion-list *ngSwitchCase="'student'">
     <ion-item>
       <ion-thumbnail item-start>
-        <img src="../../assets/imgs/profile-picture.png">
+        <img src="assets/imgs/profile-picture.png">
       </ion-thumbnail>
-      <h2>Luna</h2>
+      <h2>Umesh Singh Dhauni</h2>
+      <p>Student</p>
     </ion-item>
-    ...
   </ion-list>
 </div>
 </ion-content>

@@ -5,13 +5,13 @@
   <ion-list>
 
       <ion-item class="login-username">
-        <ion-label floating style="color:#ffffff">Username</ion-label>
-        <ion-input type="text"></ion-input>
+        <ion-label floating style="color:#ffffff">E-mail</ion-label>
+        <ion-input type="email" [(ngModel)]="email" name="email"></ion-input>
       </ion-item>
 
       <ion-item  class="login-password">
         <ion-label floating style="color:#ffffff">Password</ion-label>
-        <ion-input type="password"></ion-input>
+        <ion-input type="password" [(ngModel)]="password" name="password"></ion-input>
       </ion-item>
       <ion-item class="hidden-item">
       </ion-item>

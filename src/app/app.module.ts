@@ -13,7 +13,11 @@ import { SignupPage } from '../pages/signup/signup';
 import { MemoriesPage } from '../pages/memories/memories';
 import { EventsPage } from '../pages/events/events';
 import { SearchPage } from '../pages/search/search';
+import { FileTransfer, FileUploadOptions, FileTransferObject } from '@ionic-native/file-transfer';
 import { AddpostPage } from '../pages/addpost/addpost';
+import { Camera } from '@ionic-native/camera';
+import { HttpModule } from '@angular/http';
+import {HttpClientModule, HttpClient} from '@angular/common/http';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
@@ -34,7 +38,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    HttpModule,
+    HttpClientModule,
+    IonicModule.forRoot(MyApp),
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -54,6 +60,10 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   providers: [
     StatusBar,
     SplashScreen,
+    FileTransfer,
+    HttpModule,
+    Camera,
+    HttpClientModule,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

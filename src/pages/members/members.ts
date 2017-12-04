@@ -14,6 +14,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'members.html',
 })
 export class MembersPage {
+  members:string='alumni';
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
@@ -21,5 +22,4 @@ export class MembersPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad MembersPage');
   }
-
-}
+  }
